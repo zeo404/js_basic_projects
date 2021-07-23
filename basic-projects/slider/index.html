@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        .card{
+            margin-top: 10%;
+            margin-left: 35%;
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+        }
+        .card-images{
+            width: 400px;
+            height: 350px;
+            object-fit: cover;
+        }
+        #img-item img{
+            width: 400px;
+            height: 290px;
+        }
+        #img-item h4,a{
+            color: black;
+            margin: 5px 9px;
+        }
+        a{
+            border: 1px solid #45b6fe;
+            border-radius: 3px;
+            padding: 5px 7px;
+            background-color: #45b6fe;
+            color: #fff;
+            text-decoration: none;
+        }
+        .card-buttons{
+            height: 38px;
+            padding-left: 35%;
+            padding-top: 3%;
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="card">
+        <div class="card-images">
+            <div id="img-item">
+                <img src="./img/1.jpg">
+                <h4>Photo 1</h4>
+                <a href="#">Read More</a>
+            </div>
+            <!-- <div class="img-item">
+                <img src="./img/1.jpg">
+                <h4>Photo 2</h4>
+                <a href="#">Read More</a>
+            </div>
+            <div class="img-item">
+                <img src="./img/1.jpg">
+                <h4>Photo 3</h4>
+                <a href="#">Read More</a>
+            </div> -->
+        </div>
+
+        <div class="card-buttons">
+            <button id="left">sol</button>
+            <button id="right">sag</button>
+        </div>
+    </div>
+
+</body>
+</html>
