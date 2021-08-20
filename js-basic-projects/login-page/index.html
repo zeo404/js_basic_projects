@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page Example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #131313;
+        }
+
+        .card {
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #202020;
+            border: 1px solid #202020;
+            border-radius: 5px;
+            padding: 10px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .card .inputs {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .inputs input {
+            width: 100%;
+            height: 40px;
+            background-color: transparent;
+            border: 1px solid rgb(87, 87, 87);
+            border-radius: 5px;
+            padding: 5px;
+            color: #fff;
+            margin-top: 5px;
+        }
+
+        button{
+            text-align: center;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-top: 5px;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Login Page</h1>
+        <form class="inputs">
+            <input id="username">
+            <input id="password">
+            <button type="button" onclick="signin()" value="Sign In">
+        </form>
+    </div>
+
+
+    <script>
+        function signin(){
+            var username = document.getElementById('username').value
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cities</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #202020;
+        }
+
+        #london {
+            background-color: crimson;
+        }
+
+        #paris {
+            background-color: green;
+        }
+
+        #tokyo {
+            background-color: indigo;
+        }
+
+        #oslo {
+            background-color: brown;
+        }
+
+        .content {
+            color: #fff;
+            padding: 50px;
+            text-align: center;
+            display: none;
+        }
+
+        .link {
+            padding: 14px 16px;
+            background-color: darkturquoise;
+            width: 25%;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            color: #fff;
+            font-size: 17px;
+            transition: ease .3s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sehir baslik ve sehir icerigi -->
+    <div class="content" id="london">
+        <h1>London</h1>
+        <p>London is the capital city of England.</p>
+    </div>
+    <div class="content" id="paris">
+        <h1>Paris</h1>
+        <p>Paris is the capital city of France.</p>
+    </div>
+    <div class="content" id="tokyo">
+        <h1>Tokyo</h1>
+        <p>Tokyo is the capital city of Japan.</p>
+    </div>
+    <div class="content" id="oslo">
+        <h1>Oslo</h1>
+        <p>Oslo is the capital city of Norway.</p>
+    </div>
+
+
+    <!-- Butonlar -->
+    <button class="link" onclick="openCity('london', this, 'crimson')" id="defaultOpen">London</button>
+    <button class="link" onclick="openCity('paris', this, 'green')">Paris</button>
+    <button class="link" onclick="openCity('tokyo', this, 'indigo')">Tokyo</button>
+    <button class="link" onclick="openCity('oslo', this, 'brown')">Oslo</button>
+
+    <script>
+        function openCity(cityName, element, btnColor) {
+            const contents = document.getElementsByClassName('content');
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].style.display = 'none'
+            }
+            const links = document.getElementsByClassName('link');
+            for (let i = 0; i < links.length; i++) {
+                links[i].style.backgroundColor = 'gray';
+            }
+
+            document.getElementById(cityName).style.display = 'block';
+            element.style.backgroundColor = btnColor;
+        }
+        document.getElementById('defaultOpen').click();
+    </script>
+</body>
+
+</html>
