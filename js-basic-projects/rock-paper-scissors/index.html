@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors game</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #202020;
+        }
+        #generate{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            border: 1px solid red;
+        }
+        #genimg{
+            display: none;
+        }
+        #pick{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 100px;
+        }
+        #pick img{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="generate">
+        <img id="genimg" class="rock" src="./img/rock.png">
+        <img id="genimg" class="paper" src="./img/paper.png">
+        <img id="genimg" class="scissors" src="./img/scissors.png">
+    </div>
+
+    <div id="pick">
+        <a id="rock" onclick="startGame('rock')"><img src="./img/rock.png"></a>
+        <a id="paper" onclick="startGame('paper')"><img src="./img/paper.png"></a>
+        <a id="scissors" onclick="startGame('scissors')"><img src="./img/scissors.png"></a>
+    </div>
+
+    <script>
+        function startGame(item){
+            const images = document.querySelectorAll('genimg');
+            for(let i = 0; i < images.length; i++){
+                var randomsayi = Math.random(i);
+            }
+            document.getElementsByClassName(item).style.display = 'block';
+        }
+
+    </script>
+
+</body>
+</html>

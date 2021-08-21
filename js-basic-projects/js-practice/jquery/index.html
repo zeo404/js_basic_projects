@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Learning</title>
+    <style>
+        .highlight{
+            background-color: yellow;
+        }
+        .green{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <a id="header" href="#">Link</a>
+    <h3>Jquery dersleri</h3>
+    <ul id="liste">
+        <li class="item">Jquery Reference</li>
+        <li>Selectors <a href="#">Link</a></li>
+        <li class="item">Jquery Plugins</li>
+    </ul>
+    <ul>
+        <li><a href="#">Link</a></li>
+    </ul>
+
+    <h1>Jquery Helper Methods</h1>
+    <ul>
+        <li>Jquery Selectors</li>
+        <li>Jquery Methods</li>
+        <li>Jquery Animations</li>
+    </ul>
+    <input id="ad" type="text" placeholder="FullName">
+    <input id="soyad" type="text" placeholder="FullName" class="green">
+    <button id="btnKaydet" onclick="adsoyad();">Kaydet</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        console.log($("#liste"));
+        console.log($("h3").css('border','1px solid red'));
+        console.log($("ul"));
+        console.log($("li"));
+        console.log($(".item"));
+        console.log($("a"));
+        console.log($("ul li a"));
+        console.log($("#liste a"));
+        
+        $("#header").css("color","red");
+        var styles = {
+            color: 'indigo',
+            border: '1px solid blue',
+            fontSize: '20px'
+        }
+        $(".item").css(styles);
+
+        // var listeler = document.querySelectorAll('li');
+        // for(var i=0; i<listeler.length;i++){
+        //     listeler[i].style.color = 'red';
+        // }
+
+        $("a").css({
+            color: 'green',
+            fontSize: '25px',
+            textDecoration: 'none'
+        })
+
+        console.log($('h1').text());
+        console.log($('ul li').text());
+
+        function adsoyad(){
+            var ad = $("#ad").val();
+            var soyad = $("#soyad").val();
+
+            console.log("adiniz ve soyadiniz: " + ad + " " + soyad);
+        }
+        $("#ad").addClass('highlight')
+        $("#soyad").removeClass('green');
+    </script>
+</body>
+</html>
