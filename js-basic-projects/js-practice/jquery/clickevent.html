@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Event</title>
+    <style>
+        .prgrfRenklendir{
+            color: red;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="p1">web developer</p>
+    <p id="p2">web developer</p>
+    <p class="paragraf">web developer</p>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $('#p1').click(function () {
+                console.log('click event calisti');
+            })
+        })
+        $(document).ready(function(){
+            $('.paragraf').click(function(){
+                $(this).addClass('prgrfRenklendir');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
