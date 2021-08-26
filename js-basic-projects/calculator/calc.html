@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+        body{
+            background-color: #202020;
+            color: #fff;
+        }
+        #main{
+            width: 245px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        #result{
+            background-color: #2c3e58;
+            width: 100%;
+            height: 50px;
+            overflow: hidden;
+        }
+        #resultInner{
+            display: block;
+            margin: 10px;
+            background-color: #fff;
+            width: 225px;
+            height: 30px;
+            color: #000;
+            font-size: 30px;
+        }
+        #numbers{
+            background-color: #ecf0f1;
+            width: 185px;
+            height: 235px;
+            float: left;
+        }
+        #numbers .num, #operators .operator, #resultOperators .resultOperator{
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000000;
+            background-color: #ffffff;
+            border-radius: 4px;
+            margin: 4px;
+        }
+        #operators{
+            width: 60px;
+            height: 235px;
+            float: right;
+        }
+        #resultOperators, #operators{
+            background-color: #5c5c5c;
+        }
+        #equation{
+            width: 175px !important;
+        }
+        .clear{
+            clear: both;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var selectedOperator = "";
+            var leftPart = '';
+            var rightPart = '';
+            var numbers = document.querySelectorAll('.num');
+            for(var i = 0; i < numbers.length; i++){
+                numbers[i].addEventListener('click',function(){
+                    document.getElementById('resultInner').innerHTML += this.value; 
+                    leftPart += this.value;
+                    if(selectedOperator == ''){
+                        leftPart += this.value;
+                        alert(leftPart);
+                    }
+                    else if(selectedOperator != ''){
+                        rightPart =+ this.value;
+                        alert(rightPart);
+                    }
+                },false)
+            }
+
+            var operators = document.querySelectorAll('.operator');
+            for(var i = 0; i < operators.length; i++){
+                operators[i].addEventListener('click',function(){
+                    selectedOperator = this.value;
+                },false)
+            }
+
+            document.getElementById('equation').addEventListener('click',function(){
+                
+            },false);
+            document.getElementById('delete').addEventListener('click',function(){
+
+            },false)
+        };
+    </script>
+</head>
+<body>
+    <div id="main">
+        <h1>Basic Calculator</h1>
+        <div id="result">
+            <div id="resultInner"></div>
+        </div>
+        <div id="numbers">
+            <button value="7" class="num">7</button>
+            <button value="8" class="num">8</button>
+            <button value="9" class="num">9</button>
+            <button value="4" class="num">4</button>
+            <button value="5" class="num">5</button>
+            <button value="6" class="num">6</button>
+            <button value="1" class="num">1</button>
+            <button value="2" class="num">2</button>
+            <button value="3" class="num">3</button>
+            <button value="0" class="num">0</button>
+            <button id="dot" class="num">.</button>
+        </div>
+        <div id="operators">
+            <button value="+" class="operator">+</button>
+            <button value="-" class="operator">-</button>
+            <button value="*" class="operator">x</button>
+            <button value="/" class="operator">/</button>
+        </div>
+        <div class="clear"></div>
+        <div id="resultOperators">
+            <button class="resultOperator" id="equation">=</button>
+            <button class="resultOperator" id="delete">C</button>
+        </div>
+    </div>
+
+</body>
+</html>
