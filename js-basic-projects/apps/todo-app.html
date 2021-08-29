@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo Application</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        #container{
+
+        #container {
             height: auto;
             margin: 5% 20%;
         }
-        h1{
+
+        h1 {
             text-align: center;
         }
-        .new-task{
+
+        .new-task {
             width: 100%;
             height: 100px;
             border: 1px solid #9b9b9b;
         }
-        .new-task h3{
+
+        .new-task h3 {
             background-color: #c5c2c5;
             border-bottom: 1px solid #9b9b9b;
             padding: 10px;
         }
-        .new-task .textbox{
+
+        .new-task .textbox {
             padding: 10px;
         }
-        .textbox input{
+
+        .textbox input {
             width: 90%;
             padding: 10px;
         }
-        .textbox button{
+
+        .textbox button {
             background-color: #0077FF;
             border: none;
             font-weight: bold;
@@ -43,41 +51,49 @@
             cursor: pointer;
             color: #fff;
         }
-        button:hover{
+
+        button:hover {
             background-color: #035ec7;
         }
-        .task-container{
+
+        .task-container {
             width: 100%;
             height: auto;
             border: 1px solid #9b9b9b;
             border-radius: 5px;
             margin-top: 10px;
         }
-        .task-container .list-header{
+
+        .task-container .list-header {
             background-color: #c5c2c5;
             border-bottom: 1px solid #9b9b9b;
             padding: 10px;
         }
-        .list-header h3{
+
+        .list-header h3 {
             display: block;
             float: left;
             width: 89%;
         }
-        .list-header a{
+
+        .list-header a {
             background-color: transparent;
             border: 1px solid red;
             color: red;
             padding: 5px 7px;
             cursor: pointer;
         }
-        a:hover{
+
+        a:hover {
             color: #fff;
             background-color: red;
         }
-        .task-container ul{
+
+        .task-container ul {
             list-style-type: none;
         }
-        ul li{
+
+        ul li {
             padding: 10px;
             background-color: #D7D7DD;
             border-bottom: 1px solid #9b9b9b;
@@ -85,8 +101,9 @@
         }
     </style>
 </head>
+
 <body>
-    
+
     <div id="container">
         <h1>To Do App</h1>
         <div class="new-task">
@@ -107,6 +124,34 @@
         </div>
     </div>
 
-    <script src="./app.js"></script>
+    <script>
+        // Add new task
+        const newTask = document.querySelector('input');
+        const addTask = document.querySelector('.add-task');
+
+        addTask.addEventListener('click', function (e) {
+            var li = "<li>" + newTask.value + "</li>";
+            document.querySelector('ul').insertAdjacentHTML('beforeend', li);
+        });
+
+        // Draw on task item
+        const liElement = document.querySelectorAll('li');
+        for (let i = 0; i < liElement.length; i++) {
+            liElement[i].addEventListener('click', function () {
+                this.style.textDecoration = "line-through";
+            });
+        }
+
+        // Delete all task items
+        const deleteAll = document.querySelector('.delete-all');
+        const ulElemet = document.querySelector('ul');
+        deleteAll.addEventListener('click', function () {
+            if (confirm("Hepsini silmek istiyormusunuz?")) {
+                ulElemet.innerHTML = '';
+            }
+
+        })
+    </script>
 </body>
+
 </html>
