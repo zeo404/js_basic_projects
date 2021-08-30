@@ -1,29 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid Tracker for Places</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            background-color: #202020;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        h2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+        }
+
+        button {
+            border-radius: 5px;
+            border: none;
+            padding: 7px 10px;
+            cursor: pointer;
+            margin: 40px;
+        }
+
+        button:hover {
+            background-color: rgb(145, 144, 144);
+        }
+
+        label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
-<body>
-    
-    <h1>Kisi Sayisi</h1>
-    <h2 id="sayi">0</h2>
-    <button id="kisiArttir">Kisi arttir</button>
 
+<body>
+    <div>
+        <h1>Icerideki musteri sayisi</h1>
+        <h2 id="sayi">0</h2>
+        <button id="kisiArttir">Kisi arttir</button>
+        <button id="kisiAzalt">Kisi azalt</button>
+        <label id="toplamKisi"></label>
+    </div>
+
+    <button id="myBtn">Open Modal</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Iceride 15 kisi bulunamaz!</p>
+        </div>
+    </div>
 
     <script>
-        var sayi = document.getElementById('sayi').innerHTML;
-        sayi = parseInt(sayi);
-        console.log(sayi);
-        var kisiArttir = document.getElementById('kisiArttir').addEventListener('click',function(){
-            sayi = sayi + 1;
+        var kisiArttir = document.getElementById('kisiArttir').addEventListener('click', function () {
+            var sayi = document.getElementById('sayi').innerHTML;
+            sayi = parseInt(sayi);
+            sayi = sayi + 1
+            document.getElementById('sayi').innerHTML = sayi;
+            if (sayi == 15) {
+
+            }
+            var toplamKisi = document.getElementById('toplamKisi').innerHTML = "Gunluk Toplam Musteri: " + sayi;
+        })
+        var kisiAzalt = document.getElementById('kisiAzalt').addEventListener('click', function () {
+            var sayi = document.getElementById('sayi').innerHTML;
+            sayi = parseInt(sayi);
+            sayi = sayi - 1;
             document.getElementById('sayi').innerHTML = sayi;
         })
+
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 </body>
+
 </html>

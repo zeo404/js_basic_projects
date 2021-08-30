@@ -1,0 +1,28 @@
+{
+    "questions":[
+        {
+            "question":"Who invented JavaScript?",
+            "optionA":"Douglas Crockford",
+            "optionB":"Sheryl Sandberg",
+            "optionC":"Brendan Eich",
+            "optionD":"Guido van Rossum",
+            "answer":"optionC"
+        },
+        {
+            "question":"Which one of these is a JavaScript package manager?",
+            "optionA":"Node.js",
+            "optionB":"TypeScript",
+            "optionC":"npm",
+            "optionD":"React js",
+            "answer":"optionC"
+        },
+        {
+            "question":"Which tool can you use to ensure code quality?",
+            "optionA":"Angular",
+            "optionB":"jQuery",
+            "optionC":"RequireJS",
+            "optionD":"ESLint",
+            "answer":"optionD"
+        }
+    ]
+}
