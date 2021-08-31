@@ -6,11 +6,6 @@ console.log(localStorage);
 
 
 
-
-
-
-
-
 // SESSION STORAGE
 
 const city = sessionStorage.setItem('city','Kocaeli');
