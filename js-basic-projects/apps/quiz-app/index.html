@@ -1,33 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css"/>
     <title>Quiz app with JSON</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #343A40;
+            font-family: 'Courier New', Courier, monospace;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #quiz {
+            width: 60rem;
+            background-color: #E1E8EB;
+            border-radius: 1rem;
+            box-shadow: 0 0 1rem 0.2rem lightgray;
+            overflow: hidden;
+        }
+
+        #quiz .question-container {
+            padding: 4rem;
+
+        }
+
+        h2 {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            font-size: 2rem;
+            margin: 1rem 0;
+        }
+
+        ul li label {
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #7952B3;
+            width: 100%;
+            display: block;
+            border: none;
+            padding: 1rem;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        button:hover {
+            background-color: #60418d;
+        }
+
+        button:focus {
+            background-color: #9867e0;
+            outline: none;
+        }
+    </style>
 </head>
+
 <body>
-    
+
     <div id="quiz">
         <div class="question-container">
             <h2 id="question">Buraya soru gelecek</h2>
             <ul>
                 <li>
                     <input type="radio" name="option" id="optionA">
-                    <label for="optionA">option A content</label>
+                    <label for="optionA" id="opContentA">option A content</label>
                 </li>
                 <li>
                     <input type="radio" name="option" id="optionB">
-                    <label for="optionB">option B content</label>
+                    <label for="optionB" id="opContentB">option B content</label>
                 </li>
                 <li>
                     <input type="radio" name="option" id="optionC">
-                    <label for="optionC">option C content</label>
+                    <label for="optionC" id="opContentC">option C content</label>
                 </li>
                 <li>
                     <input type="radio" name="option" id="optionD">
-                    <label for="optionD">option D content</label>
+                    <label for="optionD" id="opContentD">option D content</label>
                 </li>
             </ul>
         </div>
@@ -36,4 +110,5 @@
 
     <script src="./script.js"></script>
 </body>
+
 </html>
