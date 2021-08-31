@@ -514,3 +514,98 @@ document.querySelectorAll();
 var tag = document.getElementById("hightlight");
 tag.style.color = "blue";
 
+
+
+
+var test = document.querySelector("button");
+var baslik = document.getElementById("ilkBaslik");
+test.addEventListener("click",function(){
+  baslik.style.color ="red";
+})
+var elements = document.querySelectorAll('ul li');
+for(var i=0;i<elements.length; i++){
+  elements[i].addEventListener('click',function(){
+    this.style.color = 'red';
+  });
+}
+var test = document.querySelector("button");
+var baslik = document.getElementById("ilkBaslik");
+test.addEventListener("click",function(){
+  baslik.style.color ="red";
+})
+var elements = document.querySelectorAll('ul li');
+for(var i=0;i<elements.length; i++){
+  elements[i].addEventListener('click',function(){
+    this.style.color = 'red';
+  });
+}var test = document.querySelector("button");
+var baslik = document.getElementById("ilkBaslik");
+test.addEventListener("click",function(){
+  baslik.style.color ="red";
+})
+var elements = document.querySelectorAll('ul li');
+for(var i=0;i<elements.length; i++){
+  elements[i].addEventListener('click',function(){
+    this.style.color = 'red';
+  });
+}var test = document.querySelector("button");
+var baslik = document.getElementById("ilkBaslik");
+test.addEventListener("click",function(){
+  baslik.style.color ="red";
+})
+var elements = document.querySelectorAll('ul li');
+for(var i=0;i<elements.length; i++){
+  elements[i].addEventListener('click',function(){
+    this.style.color = 'red';
+  });
+}var test = document.querySelector("button");
+var baslik = document.getElementById("ilkBaslik");
+test.addEventListener("click",function(){
+  baslik.style.color ="red";
+})
+var elements = document.querySelectorAll('ul li');
+for(var i=0;i<elements.length; i++){
+  elements[i].addEventListener('click',function(){
+    this.style.color = 'red';
+  });
+}var test = document.querySelector("button");
+var baslik = document.getElementById("ilkBaslik");
+test.addEventListener("click",function(){
+  baslik.style.color ="red";
+})
+var elements = document.querySelectorAll('ul li');
+for(var i=0;i<elements.length; i++){
+  elements[i].addEventListener('click',function(){
+    this.style.color = 'red';
+  });
+}var test = document.querySelector("button");
+var baslik = document.getElementById("ilkBaslik");
+test.addEventListener("click",function(){
+  baslik.style.color ="red";
+})
+var elements = document.querySelectorAll('ul li');
+for(var i=0;i<elements.length; i++){
+  elements[i].addEventListener('click',function(){
+    this.style.color = 'red';
+  });
+}var test = document.querySelector("button");
+var baslik = document.getElementById("ilkBaslik");
+test.addEventListener("click",function(){
+  baslik.style.color ="red";
+})
+var elements = document.querySelectorAll('ul li');
+for(var i=0;i<elements.length; i++){
+  elements[i].addEventListener('click',function(){
+    this.style.color = 'red';
+  });
+}var test = document.querySelector("button");
+var baslik = document.getElementById("ilkBaslik");
+test.addEventListener("click",function(){
+  baslik.style.color ="red";
+})
+var elements = document.querySelectorAll('ul li');
+for(var i=0;i<elements.length; i++){
+  elements[i].addEventListener('click',function(){
+    this.style.color = 'red';
+  });
+}
